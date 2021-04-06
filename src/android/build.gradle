@@ -17,23 +17,23 @@ repositories {
     }
 }
 
-apply plugin: com.google.firebase.crashlytics.buildtools.gradle.CrashlyticsPlugin
-android {
-    buildTypes {
-        debug {
-            firebaseCrashlytics {
-                mappingFileUploadEnabled false
-            }
-        }
-        release {
-            firebaseCrashlytics {
-                nativeSymbolUploadEnabled true
-                unstrippedNativeLibsDir "obj/local"
-                strippedNativeLibsDir "build/intermediates/jniLibs/release"
-            }
-        }
-    }
-}
+// apply plugin: com.google.firebase.crashlytics.buildtools.gradle.CrashlyticsPlugin
+// android {
+//     buildTypes {
+//         debug {
+//             firebaseCrashlytics {
+//                 mappingFileUploadEnabled false
+//             }
+//         }
+//         release {
+//             firebaseCrashlytics {
+//                 nativeSymbolUploadEnabled true
+//                 unstrippedNativeLibsDir "obj/local"
+//                 strippedNativeLibsDir "build/intermediates/jniLibs/release"
+//             }
+//         }
+//     }
+// }
 
 cdvPluginPostBuildExtras.add({
     afterEvaluate {
